@@ -1,0 +1,35 @@
+{
+  "author": "crazycat138",
+  "description": "Removes unrelated 'related answers' from Quora questions.",
+  "name": "Quora No Related Answers",
+  "version": "1.5.4",
+  "icons": {
+    "48": "icons/logo-48.png",
+    "96": "icons/logo-96.png",
+    "192": "icons/logo-192.png"
+  },
+  "minimum_chrome_version": "93",
+  "content_scripts": [
+    {
+      "matches": [
+        "*://www.quora.com/*"
+      ],
+      "js": [
+        "src/index.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "manifest_version": 3,
+  "action": {
+    "default_icon": {
+      "48": "icons/logo-48.png",
+      "96": "icons/logo-96.png",
+      "192": "icons/logo-192.png"
+    },
+    "default_title": "Quora No Related Answers"
+  },
+  "host_permissions": [
+    "*://www.quora.com/*"
+  ]
+}
